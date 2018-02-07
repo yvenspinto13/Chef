@@ -1,0 +1,91 @@
+Server -	10.244.2.33
+Workstation -	10.244.2.35
+ubuntu Node -	10.244.2.38
+windows Node -  10.244.2.47
+
+
+- To connect to the outside world use my 	  auth
+
+- for connecting to chef server/node use   set_proxy  file
+
+- run client server commands with sudo
+
+- knife download site cookbooks without  sudo
+
+- knife cookbook site download
+
+- tar zxf and then rm the tar
+
+- for running sudo chef-client behind  proxy use  -E flag to preserve environment
+
+- if chef client is running and has to be  stopped do sudo service chef-client stop
+  if not delete pid files in var/chef/cache
+
+- for (ubuntu systems) (checked ) may have to   update the cookbooks those that use 	    apt_package to have options '--force-yes'   since authentication is required for some   cases
+
+- sudo su and then cd to change directories with permissions
+
+- import war files to eclipse and run with new configured tomcat server
+
+- connecting to mysql command on client is
+  mysql -S /var/run/mysql-javawebapp/mysqld.sock   -P3306 -proot
+
+- mysql command for dumping a db file
+  mysql -S /var/run/mysql-javawebapp/mysqld.sock   -P3306 -proot < RoomBookFinal_db.sql
+
+-  always start stop tomacat services with user     and group
+
+- class not defined error , due to static block   initialisation of hibernate utility
+
+- verfication error , due to duplicate jars in   WEB-INF/lib hibernate-annotations final had to   be removed
+
+- tomcat works in windows but not on linux?
+  because motherfucking developers do not follow   case sensitivity
+
+-sudo iptables -A INPUT -p tcp -m multiport --dports 80,443 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp -m multiport --dports 80,443 -m conntrack --ctstate ESTABLISHED -j ACCEPT  
+sudo iptables -I INPUT -p tcp -m tcp --dport 8080 -j ACCEPT
+   sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+
+- apt cookbook v 6.1.4
+  java cookbook v 1.50.0 install java set to   java verion 8 by default
+  homebrew cookbook v 4.3.0 for mac os installs
+  ohai cookbook v 5.2.0
+  tomcat v 3.0.0 
+
+- sudo ps aux | grep jenkins
+  sudo kill <pid>
+  sudo service jenkins restart
+
+
+
+
+ssh hadoop@10.244.2.35; 
+export PATH=${PATH}:/bin/rm;
+rm -rf /warfiles/*.war;
+exit;
+
+
+https://selfieblue.wordpress.com/2015/10/20/devops-5-jenkins-pipeline-integrate-with-chef-for-webapp-deployment/
+
+https://programmaticponderings.com/2013/11/13/building-a-deployment-pipeline-using-git-maven-jenkins-and-glassfish-part-2-of-2/
+
+http://www.tothenew.com/blog/chef-recipe-to-deploy-grails-war-on-a-new-production-server/
+
+https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-14-04
+
+http://gettingstartedwithchef.com/first-steps-with-chef.html
+
+http://kbroman.org/github_tutorial/pages/fork.html
+
+https://www.tutorialspoint.com/chef/chef_data_bags.htm
+
+https://glassonionblog.wordpress.com/2011/04/08/tomcat-redirecting-traffic-from-port-8080-to-80-using-iptables/
+
+https://devops.profitbricks.com/tutorials/how-to-install-and-configure-tomcat-8-on-ubuntu-1604/
+
+https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands
+
+https://stackoverflow.com/questions/7739645/install-mysql-on-ubuntu-without-a-password-prompt
+
+
